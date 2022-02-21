@@ -51,22 +51,27 @@ class SearchBar extends StatelessWidget {
                         if (imageId == _image1Id) {
                           if (!exp.categoryList[0].contains(catId)) {
                             exp.assignCategory(0, catId);
+                            exp.assignSegmentation(0, [catId, seg]);
                           }
                         } else if (imageId == _image2Id) {
                           if (!exp.categoryList[1].contains(catId)) {
                             exp.assignCategory(1, catId);
+                            exp.assignSegmentation(1, [catId, seg]);
                           }
                         } else if (imageId == _image3Id) {
                           if (!exp.categoryList[2].contains(catId)) {
                             exp.assignCategory(2, catId);
+                            exp.assignSegmentation(2, [catId, seg]);
                           }
                         } else if (imageId == _image4Id) {
                           if (!exp.categoryList[3].contains(catId)) {
                             exp.assignCategory(3, catId);
+                            exp.assignSegmentation(3, [catId, seg]);
                           }
                         } else if (imageId == _image5Id) {
                           if (!exp.categoryList[4].contains(catId)) {
                             exp.assignCategory(4, catId);
+                            exp.assignSegmentation(4, [catId, seg]);
                           }
                         }
                       }

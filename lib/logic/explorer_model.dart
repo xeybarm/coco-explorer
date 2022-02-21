@@ -10,6 +10,7 @@ class ExplorerModel extends ChangeNotifier {
   List<ImagesEntity?>? imageList = [];
   List<InstancesEntity?>? insatnceList = [];
   List<List<int?>> categoryList = [[], [], [], [], []];
+  List<List<dynamic>> categorySegList = [[], [], [], [], []];
 
   bool isImagesLoading = false;
 
@@ -44,6 +45,11 @@ class ExplorerModel extends ChangeNotifier {
 
   void assignCategory(int imageIndex, int categoryId) {
     categoryList[imageIndex].add(categoryId);
+    notifyListeners();
+  }
+
+  void assignSegmentation(int imageIndex, List<dynamic> catSegList) {
+    categorySegList[imageIndex].add(catSegList);
     notifyListeners();
   }
 
